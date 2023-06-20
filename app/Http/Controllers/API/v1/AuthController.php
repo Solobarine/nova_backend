@@ -78,7 +78,6 @@ class AuthController extends Controller
 
     public function jwt_login()
     {
-        error_log('Here');
         return response()->json(Auth::user());
     }
 
