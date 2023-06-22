@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', 'https://nova-solobarine.vercel.app/*', 'http://localhost:5173/*'],
 
     'allowed_methods' => ['*'],
 
