@@ -15,6 +15,11 @@ console_command = "php /var/www/html/artisan tinker"
 [env]
   APP_ENV = "production"
   DB_CONNECTION = "pgsql"
+  DB_HOST = "novadb.internal"
+  DB_DATABASE= "nova_solly"
+  DB_PORT = 5432
+  JWT_SECRET="Ou3DdtP5JrFkUyHxGHKaWATSSNilYZHbijQD8iNo3VoQKYRs8sHiWL5n3VO8ghlb"
+  JWT_ALGO="HS256"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
@@ -27,3 +32,6 @@ console_command = "php /var/www/html/artisan tinker"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
+
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
