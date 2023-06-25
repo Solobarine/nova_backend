@@ -23,5 +23,6 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
     Route::post('register', 'register');
     Route::post('logout', 'logout');
+    Route::post('jwt-login', 'jwt_login');
     Route::post('refresh', 'refresh');
 });
